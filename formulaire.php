@@ -31,7 +31,7 @@ function test_input($data)
   return $data;
 }
 
-$nomErr = $prenomErr = $genderErr = $ddnErr = $code_postalErr = $emailErr= $sujetErr = $commentaireErr = $checkboxErr = "";
+$nomErr = $prenomErr = $genderErr = $ddnErr = $code_postalErr = $emailErr = $sujetErr = $commentaireErr = $checkboxErr = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") 
 // test les champs obligatoires pour vérifier qu'ils soit remplis, sinon déclenchement du message d'erreur correspondant

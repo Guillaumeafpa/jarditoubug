@@ -5,12 +5,12 @@ include("header.php");
 //----------------------------------------------
   require "connexion_bdd.php"; // Inclusion de notre bibliothèque de fonctions
   $db = connexionBase(); // Appel de la fonction de connexion
-  $requete = "SELECT pro_photo, pro_id, pro_ref, pro_libelle, pro_prix, pro_stock, pro_couleur, pro_d_ajout, pro_d_modif, pro_bloque FROM produits WHERE ISNULL(pro_bloque) ORDER BY pro_d_ajout DESC";
+  $requete = "SELECT pro_id, cat_nom, pro_ref, pro_date_ajout, pro_stock, pro_nom, pro_prix, pro_description, cat_id FROM produit ORDER BY pro_date_ajout DESC";
 //----------------------------------------------
 
 
 
-/* je ne sais pas a quoi sa sert */
+/* vérification si la base de données vide */
 //----------------------------------------------
   $result = $db->query($requete);
 
@@ -35,7 +35,7 @@ include("header.php");
 ?>
 <div>
   <br>
-  <a href='add_form.php' title="lien vers le formulaire d'ajout"><button type="submit" class="col-12 btn bg-secondary text-white"><strong>ajouter un produit</strong>
+    <a href='add_form.php' title="lien vers le formulaire d'ajout"><button type="submit" class="col-12 btn bg-secondary text-white"><strong>ajouter un produit</strong>
   </button></a><br>
   <br>
 </div>
